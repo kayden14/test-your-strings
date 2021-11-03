@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Case</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 4em;
+        color: coral;
+        padding-top: 1em;
+    }
+    p{
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 3em;
+        color: coral;
+    }
+    button{
+        border-radius: 0.3em;
+        margin-left: 9em;
+        margin-top: 100px;
+        font-size: x-large;
+        color: coral;
+        background-color: white;
+    }
+</style>
+<body>
+    <h1>innocent teddy</h1>
+    <p>is my Teddy</p>
+    <button class="lower">LowerCase</button>
+    <button class="upper">UpperCase</button>
+    <button class="cap">Capitalize</button>
+    
+    <script>
+        
+        const upper = document.querySelector('.upper');
+        const lower = document.querySelector('.lower');
+        const cap = document.querySelector('.cap');
+        const heading = document.querySelector('h1');
+
+
+        function toUpper(){
+
+            heading.style.textTransform   = 'upperCase';
+            heading.style.color = 'aqua';
+            heading.style.backgroundColor = 'salmon';
+        }
+
+        function toLower(){
+
+            heading.style.textTransform   ='lowerCase';
+            heading.style.color = 'salmon';
+            heading.style.backgroundColor = 'aqua';
+        }
+
+        function toCapital(){
+
+            heading.style.textTransform   = 'capitalize';
+            heading.style.color = 'blue';
+            heading.style.backgroundColor = 'pink';
+        }
+
+
+        upper.onclick = toUpper;
+        lower.onclick = toLower;
+        cap.onclick = toCapital;
+
+    </script>
+</body>
+</html>
