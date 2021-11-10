@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Button</title>
+</head>
+<body>
+    <h1>windows 10</h1>
+    <button>Change</button>
+
+
+
+
+    <script>
+      const btn = document.querySelector('button');
+     
+
+
+   function random(number) {
+  return Math.floor(Math.random() * (number+1));
+}
+
+function changeColor() {
+  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  document.body.style.backgroundColor = rndCol;
+  document.body.style.color = 'rgb(' + random(300) + ',' + random(300) + ',' + random(300) + ')';
+}
+
+function toUpper(){
+
+document.body.style.textTransform   = 'upperCase';
+}
+
+function toLower(){
+
+document  .body.style.textTransform   ='lowerCase';
+
+}
+
+function toCapital(){
+document.body.style.textTransform   = 'capitalize';
+}
+
+btn.addEventListener('click', changeColor);
+btn.addEventListener('click', toUpper);
+btn.addEventListener('click', toCapital);
+btn.addEventListener('click', toLower);
+
+
+     
+
+    </script>
+</body>
+</html>
